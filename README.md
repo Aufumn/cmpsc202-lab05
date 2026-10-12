@@ -23,11 +23,11 @@ For the following graph, list the vertices and edges. What is the size of the gr
 
 ![ex1](images/ex1.png)
 
-- **Vertices**: 
+- **Vertices**: {0,1,2,3,4}
 
-- **Edges**: 
+- **Edges**: {{0,1},{1,2},{0,2},{0,3},{3,4}}
 
-- **Size**:
+- **Size**: n = 5 vertices and m=5 edges. The graph's size is (5, 5), or 5 vertices and 5 edges.
 
 
 ## Paths and Distances
@@ -45,26 +45,29 @@ The graph below shows the state of the internet in 1970s. Vertices represent com
 
 1. Find a path from RAND to SRI. What is the distance between these two vertices?
 
-- **Path**:
+- **Path**: RAND → UCLA → SRI
 
-- **Distance**:
+- **Distance**: 2 edges
 
 2. Find a path from RAND to MIT. What is the distance between these two vertices?
 
-- **Path**:
+- **Path**: RAND → BBN → MIT
 
-- **Distance**:
+- **Distance**: 2 edges
 
 3. Classify each of the following paths as simple, not simple, or a cycle. State your reasoning!
 
 - **Path 1**: LINC, MIT, LINC, CASE
-- **Classification**:
+- **Classification**: not simple
+- **Reasoning**: The vertex LINC appears twice, so the path repeats a vertex. It is not a cycle because it starts at LINC and ends at CASE.
 
 - **Path 2**: UCSB, SRI, STAN, UCLA, UCSB
-- **Classification**:
+- **Classification**: Cycle 
+- **Reasoning**: It starts and ends at UCSB, all other vertices are distinct, and no edges are repeated.
 
 - **Path 3**: UCSB, SRI, UTAH
-- **Classification**:
+- **Classification**: Simple 
+- **Reasoning**: Every vertex is distinct, and each consecutive pair is connected by an edge.
 
 ## Connectivity and Trees
 
@@ -77,6 +80,9 @@ Think through these with your partner(s) before answering the questions below. I
 
 1. A connected graph is defined as a graph with paths between every pair of vertices. If a graph with 10 vertices has exactly 8 edges, is it possible for the graph to be connected? Explain your reasoning based on the minimum number of edges required to link all vertices.
 
+- **Explanation**: No this is not possible a graph with 10 connected vertecies may have 10-1 = 9 edges as the minimum number of edges is n - 1. since the graph only has 8 edges it it cannot be connected.
 
 
 2. A tree is a connected graph with no cycles. If you take an existing tree and add exactly one new edge between two non-adjacent vertices, what structural property is immediately violated?
+
+- **Explanation**:The graph gains a cycle, violating the tree property of having no cycles. A tree is connected and has no cycles. Because there is already a path between any two vertices in a tree, adding an edge between two previously non-adjacent vertices creates a cycle using the new edge and the existing path.
